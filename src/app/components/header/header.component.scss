@@ -40,10 +40,10 @@
     &--callback-btn {
         margin-top: 50px;
         margin-left: auto;
-        color: #1E63E4;
+        color: var( --blue-color);
         font-size: 20px;
         font-weight: 600;
-        border: 3px solid #1E63E4;
+        border: 3px solid var( --blue-color);
         border-radius: 100px;
         padding: 16px 55px;
     }

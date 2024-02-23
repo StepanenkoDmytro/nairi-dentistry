@@ -1,0 +1,35 @@
+.preview {
+    display: flex;
+
+    &--text {
+        background-color: var(--blue-color);
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 50px;
+        padding-bottom: 165px;
+        color: var(--white-color); 
+    }
+
+    &--text-big {
+        font-size: 32px;
+        margin-bottom: 30px;
+        font-weight: 700px;
+    }
+
+    &--text-small {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &--image {
+        flex: 1;
+        width: 100%;
+    }
+
+    &--image img{
+        width: inherit;
+        height: 100%;
+    }
+}
