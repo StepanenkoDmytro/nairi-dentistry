@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { ServicesListComponent } from './components/services-list/services-list.component';
 import { TitleComponent } from './components/title/title.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TitleComponent } from './components/title/title.component';
     PreviewComponent,
     ServicesListComponent,
     TitleComponent,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
