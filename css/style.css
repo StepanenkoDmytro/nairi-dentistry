@@ -290,6 +290,23 @@ a{
   justify-content: space-between;
 }
 
+.contacts__info {
+  /* display: flex; */
+}
+
+.contacts__info-box {
+  display: flex;
+  padding: 60px;
+}
+
+.contacts__info-item img {
+  width: inherit;
+}
+
+.contacts__info-item svg path {
+  stroke: blue;
+}
+
 .contacts__list{
   list-style: none;
 }
@@ -349,8 +366,16 @@ a{
   font-family: 'Oswald', sans-serif;
 }
 
+.contacts__map {
+
+}
+
 .footer{
-  background-color: #21062A;
+  background-color: #1E63E4;
+}
+
+.footer__box {
+  display: flex;
 }
 
 .footer__inner{
