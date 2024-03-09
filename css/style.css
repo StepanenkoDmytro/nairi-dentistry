@@ -320,54 +320,61 @@ a{
 }
 
 .contacts__form{
-  background-color: #21062A;
-  padding: 50px 75px 57px;
+  padding: 50px 50px 50px 0px;
   text-align: center;
 }
 
 .contacts__title{
   color: #fff;
-  margin-bottom: 16px;
-  margin-left: 53px;
-  text-align: left;
-}
-
-.contacts__title::after{
-  background-color: #fff;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .contacts__input{
-  background-color: transparent;
-  width: 450px;
-  height: 75px;
-  color: #fff;
+  width: 320px;
+  height: 40px;
   border: 1px solid #fff;
-  margin-bottom: 12px;
-  display: block;
-  font-size: 24px;
-  padding: 0 15px;
-  text-align: center;
-}
-
-.contacts__input::placeholder{
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
-  line-height: 27px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: block; 
+  font-size: 13px;
   font-weight: 300;
-  color: #c4c4c4;
+  padding: 0 15px;
+  color: #5588EA;
 }
 
-.contacts__btn{
-  border: none;
-  color: #fff;
-  margin-top: 78px;
+.contacts__input::placeholder {
+  color: #5588EA;
+}
+
+.contacts__input-area {
+  width: 320px;
+  height: 150px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: block;
+  color: #5588EA;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+
+.contacts__input-area::placeholder {
+  font-family: 'Inter', sans-serif;
+  color: #5588EA;
+}
+
+.contacts__btn {
+  width: 320px;
+  height: 40px;
+  border-radius: 10px;
+  color: #1E63E4;
+  font-size: 22px;
+  font-weight: 400;
+  background-color: #fff;
   cursor: pointer;
-  font-family: 'Oswald', sans-serif;
-}
-
-.contacts__map {
-
 }
 
 .footer{
@@ -376,14 +383,27 @@ a{
 
 .footer__box {
   display: flex;
+  justify-content: space-between;
+  color: #fff;
 }
 
-.footer__inner{
+.footer__social {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.footer__social-inner{
+  display: flex;
   align-items: center;
   color: #fff;
-  height: 100px;
+  /* height: 100px; */
+}
+
+.footer__social-text {
+  font-size: 20px;
+  /* color: #fff; */
 }
 
 
