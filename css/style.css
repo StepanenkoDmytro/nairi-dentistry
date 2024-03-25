@@ -382,6 +382,80 @@ a {
   cursor: pointer;
 }
 
+.table-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-left: 60px;
+}
+
+.accordion-item.item {
+  margin: 30px;
+  /* border-radius: 10px; */
+  border: none;
+}
+
+.accordion-button.header-list {
+  background-color: #DEE6F6;
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 10px!important;
+}
+
+.accordion-button:focus.header-list {
+  border-color: inherit;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed).header-list {
+  color: inherit;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  content: "-"!important;
+  border-radius: 50%;
+  background-image: none !important;
+  background-color: #1E63E4;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.accordion-button.collapsed::after {
+  content: "+"!important;
+}
+
+.list {
+  width: 100%;
+}
+
+.list tr {
+  height: 75px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.list tr:first-child {
+  border-top: none;
+}
+
+.list tr:not(:last-child) {
+  border-bottom: none;
+}
+
+.list th {
+  margin-left: auto;
+  width: 80%;
+}
+
+.list td {
+  margin-right: auto;
+}
 
 @media (max-width: 1140px){
 
