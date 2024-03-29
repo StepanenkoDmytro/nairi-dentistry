@@ -390,7 +390,6 @@ a {
 
 .accordion-item.item {
   margin: 30px;
-  /* border-radius: 10px; */
   border: none;
 }
 
@@ -412,9 +411,8 @@ a {
 }
 
 .accordion-button::after {
-  content: "-"!important;
   border-radius: 50%;
-  background-image: none !important;
+  background-image: url(../images/table/according.png) !important;
   background-color: #1E63E4;
   color: white;
   font-size: 20px;
@@ -423,12 +421,27 @@ a {
   align-items: flex-end;
 }
 
-.accordion-button.collapsed::after {
-  content: "+"!important;
+.accordion-button::after {
+  background-image: url(../images/table/according-collapsed.png) !important;
 }
 
 .list {
   width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 560px;
+  height: 100%;
+  background-image: url(../images/table/table_background.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .list tr {
