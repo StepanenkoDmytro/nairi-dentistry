@@ -26,7 +26,7 @@ TempLate Name: prices
             'category' => $subcategory->term_id,
         ]);
         $subcategory_name = get_cat_name( $subcategory->term_id );
-        $accordion_id = 'accordion-' . $subcategory_name;
+        $accordion_id = 'accordion-' . str_replace(' ', '', $subcategory_name);
         ?>
         <div class="accordion-item item">
           <h2 class="accordion-header" id="flush-headingOne">
@@ -83,6 +83,7 @@ TempLate Name: prices
           
           const accordionId = 'accordion-' + subcategoryParam;
           const accordion = document.getElementById(accordionId);
+          console.log(accordionId);
           if (accordion) {
             accordion.classList.add('show');
             

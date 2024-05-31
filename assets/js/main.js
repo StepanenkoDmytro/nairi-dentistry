@@ -14,7 +14,7 @@ $(function(){
         }
       },
       {
-        breakpoint: 601,
+        breakpoint: 801,
         settings: {
           slidesToShow: 1.65,
           centerPadding: '20%',

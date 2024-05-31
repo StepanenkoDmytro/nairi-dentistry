@@ -42,22 +42,31 @@
             </div>
           </div>
 
-          <div class="header-info__contact">
+          <!-- <div class="header-info__contact">
             <a class="contact-social" href="<?php the_field('instagram-link'); ?>">
               <img src="<?php bloginfo('template_url');?>/assets/images/instagram.svg" alt="instagram">
             </a>
             <a class="contact-social" href="<?php the_field('facebook-link'); ?>">
               <img src="<?php bloginfo('template_url');?>/assets/images/facebook.svg" alt="facebook">
             </a>
-          </div>
+          </div> -->
 
         </div>
 
         <div class="header-info__btns">
           <div class="header-info__btns-menu">
-            <button class="header-info__btn montserrat" onclick="redirectToHome()">Ми</button>
-            <button class="header-info__btn montserrat" onclick="redirectToPrices()">Ціни</button>
-            <button class="header-info__btn montserrat" onclick="moveToSection('footer')">Контакти</button>
+            <div class="header-info__btn-box">
+              <button class="header-info__btn montserrat <?php if (is_front_page()) { echo 'header-info__btn-active'; } ?>" onclick="redirectToHome()">Ми</button>
+              <div class="header-info__btn-line"></div>
+            </div>
+            <div class="header-info__btn-box">
+              <button class="header-info__btn montserrat  <?php if (is_page('prices')) { echo 'header-info__btn-active'; } ?>" onclick="redirectToPrices()">Ціни</button>
+              <div class="header-info__btn-line"></div>
+            </div>
+            <div class="header-info__btn-box" style="flex: 0.7">
+              <button class="header-info__btn montserrat" onclick="moveToSection('footer')">Контакти</button>
+              <div class="header-info__btn-line"></div>
+            </div>
           </div>
           <button class="header-info__callback button" id="openModal">Записатися зараз</button>
         </div>

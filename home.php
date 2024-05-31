@@ -91,6 +91,7 @@ TempLate Name: home
 
         <script>
           function redirectToPrices(title) {
+            title = title.replace(/\s+/g, '');
             window.location.href = "<?php echo home_url('/prices?subcategory='); ?>" + title;
           }
         </script>
