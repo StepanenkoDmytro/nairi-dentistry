@@ -44,6 +44,142 @@ TempLate Name: prices
 
               <table class="list">
                 <tbody>
+                <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <?php the_title(); ?>
+                    </th>
+                    <td>
+                      <?php the_content(); ?>
+                    </td>
+                  </tr>
                   <tr>
                     <th>
                       <?php the_title(); ?>
@@ -68,6 +204,28 @@ TempLate Name: prices
       
     ?>
     <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        const openAccordion = document.querySelector('.accordion-collapse.show');
+        if (openAccordion) {
+          const accordionHeader = openAccordion.previousElementSibling;
+          accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          document.body.scrollTop = 0; 
+          document.documentElement.scrollTop = 0;
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function() {
         const urlParams = new URLSearchParams(window.location.search);
           
@@ -96,6 +254,7 @@ TempLate Name: prices
 
     </div>
   </div>
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="up"></button>
 </main>
 
 <?php get_footer();?>

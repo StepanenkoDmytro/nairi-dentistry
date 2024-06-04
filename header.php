@@ -17,7 +17,7 @@
 
       <div class="dropdown">
         <button id="dropdown-close" class="dropbtn burger-icon" onclick="toggleDropdown()"></button>
-        <!-- <button id="dropdown-open" class="dropbtn burger-close" onclick="toggleDropdown()"></button> -->
+        <button id="dropdown-open" class="dropbtn burger-close" onclick="toggleDropdown()"></button>
       </div>
 
       <div class="header-info">
@@ -58,15 +58,12 @@
           <div class="header-info__btns-menu">
             <div class="header-info__btn-box">
               <button class="header-info__btn montserrat <?php if (is_front_page()) { echo 'header-info__btn-active'; } ?>" onclick="redirectToHome()">Головна</button>
-              <div class="header-info__btn-line"></div>
             </div>
             <div class="header-info__btn-box">
               <button class="header-info__btn montserrat  <?php if (is_page('prices')) { echo 'header-info__btn-active'; } ?>" onclick="redirectToPrices(null)">Ціни</button>
-              <div class="header-info__btn-line"></div>
             </div>
             <div class="header-info__btn-box" style="flex: 0.7">
               <button class="header-info__btn montserrat" onclick="moveToSection('footer')">Контакти</button>
-              <div class="header-info__btn-line"></div>
             </div>
           </div>
           <button class="header-info__callback button" id="openModal">Записатися зараз</button>
@@ -93,10 +90,17 @@
   <script>
     function toggleDropdown() {
       var dropdown = document.getElementById("myDropdown");
+      var buttonClose = document.getElementById("dropdown-close");
+      var buttonOpen = document.getElementById("dropdown-open");
+      
       if (dropdown.style.display === "flex") {
         dropdown.style.display = "none";
+        buttonClose.style.display = "block";
+        buttonOpen.style.display = "none";
       } else {
         dropdown.style.display = "flex";
+        buttonClose.style.display = "none";
+        buttonOpen.style.display = "block";
       }
     }
 
@@ -112,15 +116,6 @@
         }
       }
     }
-
-    // function redirectToPrices() {
-    //   const currentPage = window.location.pathname;
-    //   console.log(window.location.pathname)
-    //   if(currentPage !== '/prices') {
-    //     window.location.href = "<?php echo home_url('/prices'); ?>";
-    //     // window.location.href = "/prices";
-    //   }addEventListener
-    // }
 
     function redirectToHome() {
       const currentPage = window.location.pathname;
@@ -139,5 +134,3 @@
   </script>
   
 </header>
-
-<!-- <?php echo do_shortcode('[contact-form-7 id="6a149cb" title="Contact_form(footer)"]'); ?> -->

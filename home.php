@@ -101,7 +101,7 @@ TempLate Name: home
 
           function scrollFunction() {
             const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
               scrollToTopBtn.style.display = "block";
             } else {
               scrollToTopBtn.style.display = "none";
