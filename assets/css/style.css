@@ -42,6 +42,10 @@ border-radius: 100px;
 padding: 16px 55px;
 }
 
+.button:hover {
+  opacity: 0.9;
+}
+
 .header {
 margin-top: 30px;
 }
@@ -123,6 +127,11 @@ color: #fff;
 border-radius: 20px;
 padding-inline: 20px;
 font-weight: 400;
+}
+
+.header-info__callback:hover {
+  background-color: #1E63E4;
+  color: #fff;
 }
 
 .header-info__btn-active {
@@ -683,7 +692,17 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: 100%;
 background-image: url(../images/burger.svg)!important;
+}
 
+.burger-close {
+  width: 100px;
+height: 100px;
+margin: 25px;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+background-image: url(../images/burger.svg)!important;
 }
 
 .bl {
@@ -702,6 +721,31 @@ background-color: #DEE6F6;
 .callback__form {
 padding: 50px;
 }
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #1E63E4;
+  color: white;
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url(../images/arrow.png) !important;
+  transform: rotate(90deg);
+}
+
+#scrollToTopBtn:hover {
+  opacity: 0.9;
+}
+
 
 .wpcf7-form p {
 width: 320px;

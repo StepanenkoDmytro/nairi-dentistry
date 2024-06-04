@@ -67,21 +67,21 @@ TempLate Name: home
                   $counter++;
         ?>
         <li class="list__item">
-            <?php if ($counter % 2 != 0) : ?>
-                <?php the_post_thumbnail(); ?>
-            <?php endif; ?>
-            <div class="list__item-box">
-                <p class="list__item-box__primary-text montserrat"><?php the_title(); ?></p>
-                <div class="list__item-box__text"><?php the_content(); ?></div>
-                <button class="list__item-btn button" onclick="redirectToPrices('<?php echo get_the_title(); ?>')">Детальніше ></button>
-            </div>
-            <?php if ($counter % 2 == 0) : ?>
-                <?php the_post_thumbnail(); ?>
-            <?php endif; ?>
-            <button class="list__item-mobile-btn button montserrat" onclick="redirectToPrices('<?php echo get_the_title(); ?>')">
-              <p class="mobile-btn__text"><?php the_title(); ?></p> 
-              <p class="mobile-btn__arrow"></p>
-            </button>
+          <?php if ($counter % 2 != 0) : ?>
+              <?php the_post_thumbnail(); ?>
+          <?php endif; ?>
+          <div class="list__item-box">
+              <p class="list__item-box__primary-text montserrat"><?php the_title(); ?></p>
+              <div class="list__item-box__text"><?php the_content(); ?></div>
+              <button class="list__item-btn button" onclick="redirectToPrices('<?php echo get_the_title(); ?>')">Детальніше ></button>
+          </div>
+          <?php if ($counter % 2 == 0) : ?>
+              <?php the_post_thumbnail(); ?>
+          <?php endif; ?>
+          <button class="list__item-mobile-btn button montserrat" onclick="redirectToPrices('<?php echo get_the_title(); ?>')">
+            <p class="mobile-btn__text"><?php the_title(); ?></p> 
+            <p class="mobile-btn__arrow"></p>
+          </button>
         </li>
         <?php
             }
@@ -91,9 +91,28 @@ TempLate Name: home
 
         <script>
           function redirectToPrices(title) {
-            title = title.replace(/\s+/g, '');
+            if(title) {
+              title = title.replace(/\s+/g, '');
+            }
             window.location.href = "<?php echo home_url('/prices?subcategory='); ?>" + title;
           }
+
+          window.onscroll = function() {scrollFunction()};
+
+          function scrollFunction() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+              scrollToTopBtn.style.display = "block";
+            } else {
+              scrollToTopBtn.style.display = "none";
+            }
+          }
+
+          function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+          }
+
         </script>
 
       </ul>
@@ -218,6 +237,7 @@ TempLate Name: home
       </div>
     </div>
   </section>
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="up"></button>
 </main>
 
 <?php get_footer();?>

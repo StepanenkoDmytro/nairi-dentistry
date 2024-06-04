@@ -16,7 +16,8 @@
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn burger-icon" onclick="toggleDropdown()"></button>
+        <button id="dropdown-close" class="dropbtn burger-icon" onclick="toggleDropdown()"></button>
+        <!-- <button id="dropdown-open" class="dropbtn burger-close" onclick="toggleDropdown()"></button> -->
       </div>
 
       <div class="header-info">
@@ -56,11 +57,11 @@
         <div class="header-info__btns">
           <div class="header-info__btns-menu">
             <div class="header-info__btn-box">
-              <button class="header-info__btn montserrat <?php if (is_front_page()) { echo 'header-info__btn-active'; } ?>" onclick="redirectToHome()">Ми</button>
+              <button class="header-info__btn montserrat <?php if (is_front_page()) { echo 'header-info__btn-active'; } ?>" onclick="redirectToHome()">Головна</button>
               <div class="header-info__btn-line"></div>
             </div>
             <div class="header-info__btn-box">
-              <button class="header-info__btn montserrat  <?php if (is_page('prices')) { echo 'header-info__btn-active'; } ?>" onclick="redirectToPrices()">Ціни</button>
+              <button class="header-info__btn montserrat  <?php if (is_page('prices')) { echo 'header-info__btn-active'; } ?>" onclick="redirectToPrices(null)">Ціни</button>
               <div class="header-info__btn-line"></div>
             </div>
             <div class="header-info__btn-box" style="flex: 0.7">
@@ -83,8 +84,8 @@
       </div>
     </div>
     <div class="dropdown-content" id="myDropdown">
-      <button class="header-info__btn" onclick="redirectToHome()">Ми</button>
-      <button class="header-info__btn" onclick="redirectToPrices()">Ціни</button>
+      <button class="header-info__btn" onclick="redirectToHome()">Головна</button>
+      <button class="header-info__btn" onclick="redirectToPrices(null)">Ціни</button>
       <button class="header-info__btn" onclick="moveToSection('footer')">Контакти</button>
     </div>
   </div>
@@ -112,12 +113,14 @@
       }
     }
 
-    function redirectToPrices() {
-      const currentPage = window.location.pathname;
-      if(currentPage !== '/prices/') {
-        window.location.href = "<?php echo home_url('/prices/'); ?>";
-      }
-    }
+    // function redirectToPrices() {
+    //   const currentPage = window.location.pathname;
+    //   console.log(window.location.pathname)
+    //   if(currentPage !== '/prices') {
+    //     window.location.href = "<?php echo home_url('/prices'); ?>";
+    //     // window.location.href = "/prices";
+    //   }addEventListener
+    // }
 
     function redirectToHome() {
       const currentPage = window.location.pathname;

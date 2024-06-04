@@ -69,21 +69,17 @@ TempLate Name: prices
     ?>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        
         const urlParams = new URLSearchParams(window.location.search);
           
         const subcategoryParam = urlParams.get('subcategory');
-
         if (!subcategoryParam || subcategoryParam === 'undefined') {
           const urlWithoutParam = window.location.href.split('?')[0];
           window.history.replaceState({}, document.title, urlWithoutParam);
         }
 
         if (subcategoryParam) {
-          
           const accordionId = 'accordion-' + subcategoryParam;
           const accordion = document.getElementById(accordionId);
-          console.log(accordionId);
           if (accordion) {
             accordion.classList.add('show');
             
