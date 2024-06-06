@@ -36,163 +36,29 @@ TempLate Name: prices
           </h2>
           <div id="<?php echo $accordion_id; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-    
+            <table class="list">
+                <tbody>
             <?php
             foreach( $myposts as $post ){
               setup_postdata( $post );
               ?>
 
-              <table class="list">
-                <tbody>
-                <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
+              
                   <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <?php the_title(); ?>
-                    </th>
-                    <td>
-                      <?php the_content(); ?>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      <th>
+                        <?php the_title(); ?>
+                      </th>
+                      <td>
+                        <?php if (trim(get_the_content()) != '0') : ?>
+                          <span><?php the_content(); ?></span>грн
+                        <?php endif; ?>
+                      </td>
+                    </tr>
+                
               
               <?php } ?>
-
+              </tbody>
+              </table>
             </div>
           </div>
         </div>

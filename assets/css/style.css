@@ -460,7 +460,7 @@ color: #fff;
 }
 
 .footer-contacts__btn:hover {
-  background-color: #f0d6d6;
+  background-color: #f7e9e9;
 }
 
 .modals .footer-contacts__form .footer-contacts__btn {
@@ -577,25 +577,25 @@ background-image: url(../images/table/according-collapsed.png) !important;
 }
 
 .list {
-width: 100%;
+    width: 100%;
 }
 
 .accordion-body {
-position: relative;
-z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
-.accordion-body::after {
-content: "";
-position: absolute;
-top: 0;
-left: 25%;
-width: 560px;
-height: 100%;
-background-image: url(../images/table/table_background.png);
-background-size: cover;
-background-position: center;
-z-index: -1;
+.list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    background-image: url(../images/table/table_background.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .list tr {
@@ -616,13 +616,20 @@ border-bottom: none;
 }
 
 .list th {
-  margin-left: 20px;
-  width: 80%;
-  font-weight: 400;
+    padding: 10px;
+    width: 80%;
+    font-weight: 400;
 }
 
 .list td {
-margin-right: auto;
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    text-align: start;
+}
+
+.list span {
+    margin-right: 10px;
 }
 
 .modals {
@@ -1200,7 +1207,7 @@ padding: 50px;
 }
 
 .list tr {
-  height: 120px;
+  height: max-content;
   font-size: 34px;
 }
 
