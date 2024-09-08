@@ -49,7 +49,7 @@ TempLate Name: home
     </div>
 
     <div class="containers">
-      <ul class="list">
+      <ul>
 
         <?php
           global $post;
